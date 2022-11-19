@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="global.css" />
+
+        <title>Technical Interview at Aleph - 2022/11/18</title>
+    </head>
+    <body>
+        <main>
+            <section class="container">
+                <article>
+                    <h1>Problem to solve</h1>
+                    <p>
+                        Given an integer array arr of distinct integers and an
+                        integer k. A game will be played between the first two
+                        elements of the array (i.e. arr[0] and arr[1]).
+                    </p>
+                    <p>
+                        In each round of the game, we compare arr[0] with
+                        arr[1], the larger integer wins and remains at position
+                        0, and the smaller integer moves to the end of the
+                        array. The game ends when an integer wins k consecutive
+                        rounds.
+                    </p>
+                    <p>Return the integer which will win the game.</p>
+                    <p>
+                        It is guaranteed that there will be a winner of the
+                        game.
+                    </p>
+                    <p>
+                        Example 1: <br />
+                        Input: arr = [2,1,3,5,4,6,7], k = 2 <br />
+                        Output: 5 Explanation: Let's see the rounds of the game:
+                        <br />
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Round</th>
+                            <th>arr</th>
+                            <th>winner</th>
+                            <th>win_count</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>[2,1,3,5,4,6,7]</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>[2,3,5,4,6,7,1]</td>
+                            <td>3</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>[3,5,4,6,7,1,2]</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>[5,4,6,7,1,2,3]</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <p>
+                        So we can see that 4 rounds will be played and 5 is the
+                        winner because it wins 2 consecutive games.
+                    </p>
+                    <p>
+                        Example 2: <br />
+                        Input: arr = [3,2,1], k = 10 Output: 3
+                    </p>
+                    <p>
+                        Explanation: 3 <br />
+                        will win the first 10 rounds consecutively.
+                    </p>
+                    <p>
+                        Constraints: <br />
+                        2 <= arr.length <= 105 <br />
+                        1 <= arr[i] <= 106 <br />
+                        arr containsdistinct integers. <br />
+                        1 <= k <= 109
+                    </p>
+                </article>
+            </section>
+
+            <section class="container">
+                <h2>Code solution</h2>
+
+                <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="gOKXZKz" data-user="vic89_m" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/vic89_m/pen/gOKXZKz">
+                    Untitled</a> by Victor Alvarado (<a href="https://codepen.io/vic89_m">@vic89_m</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+        </main>
+
+    
+        <script src="app.js"></script>
+    </body>
+</html>
